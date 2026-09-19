@@ -1,13 +1,13 @@
 """
 network_analysis.py  --  reproduces every network number reported in the manuscript.
-Input : Supplementary_Tables.xlsx, sheet 'S1_Edges' (one row per drug-target edge)
+Input : Table_S1_Edges.xlsx, sheet "S1_Edges" (one row per drug-target edge)
 Output: printed summary + 'sensitivity.csv'
 Requires: pandas, networkx, openpyxl
 """
 import sys, itertools
 import pandas as pd, networkx as nx
 
-XLSX = sys.argv[1] if len(sys.argv) > 1 else "Supplementary_Tables.xlsx"
+XLSX = sys.argv[1] if len(sys.argv) > 1 else "Table_S1_Edges.xlsx"
 E = pd.read_excel(XLSX, sheet_name="S1_Edges")
 DRUGS = ["Ivermectin", "Dronedarone", "Fenbendazole", "Methylene Blue"]
 
